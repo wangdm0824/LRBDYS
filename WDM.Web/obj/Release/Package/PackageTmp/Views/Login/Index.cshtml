@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "首页";
+}
+<html>
+<head>
+    <meta property="qc:admins" content="017324167764224136375" />
+</head>
+<body>
+    <h2>OAuth2.0  QQ互联开放授权</h2>
+    <div>
+
+        <hr />
+        <div>
+            <p>
+                <span style="font-size: 35px;">QQ互联</span><img src="../../Content/images/connect.png" onclick="@ViewBag.QQLogin"/>
+            </p>
+            <a href="@ViewBag.QQLogin">登陆</a>
+            <text>|</text>
+            @* @if (ViewBag.AccessTokenObj != null)
+        { 
+            <p>@Html.ActionLink("退出", "Exit", "Home")</p>
+        }*@
+        </div>
+
+        @*<div>
+        @if (ViewBag.AccessTokenObj != null)
+        { 
+            <p>@Html.ActionLink("退出", "Exit", "Home")</p>
+        }
+    </div>*@
+    </div>
+</body>
+</html>

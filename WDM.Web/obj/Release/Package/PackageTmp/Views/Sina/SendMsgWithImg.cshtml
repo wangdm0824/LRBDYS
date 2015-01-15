@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "SendMsgWithImg";
+}
+
+<h2>PublishMsgWithImg</h2>
+
+@using (Html.BeginForm("PublishMsgWithImg", "Sina", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <span>微博：</span>@Html.TextBox("status", "发表微博测试", new { style = "width: 900px;" })<br />
+    <span>图片：</span><input type="file" id="pic" name="pic" /><br />
+    <input type="submit" value="转发" />
+    
+}
+
+@if (Model != null)
+{
+    <br /><text>发送成功</text><br />
+    @Model.ToString();
+}

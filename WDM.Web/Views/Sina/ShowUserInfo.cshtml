@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "ShowUserInfo";
+}
+
+<h2>用户：@Model.screen_name</h2>
+<p>
+用户UID: @Model.id<br />
+用户昵称: @Model.screen_name<br />
+友好显示名称: @Model.name<br />
+用户所在地区ID: @Model.province<br />
+用户所在城市ID: @Model.city<br />
+用户所在地: @Model.location<br />
+用户描述: @Model.description<br />
+用户博客地址: @Model.url<br />
+用户头像地址: @Model.profile_image_url @MvcHtmlString.Create(string.Format("<img src='{0}' />", Model.profile_image_url))<br />
+用户的个性化域名: @Model.domain<br />
+性别(m：男、f：女、n：未知): @Model.gender<br />
+粉丝数: @Model.followers_count<br />
+关注数: @Model.friends_count<br />
+微博数: @Model.statuses_count<br />
+收藏数: @Model.favourites_count<br />
+创建时间: @Model.created_at<br />
+当前登录用户是否已关注该用户: @Model.following<br />
+是否允许所有人给我发私信: @Model.allow_all_act_msg<br />
+是否允许带有地理信息: @Model.geo_enabled<br />
+是否是微博认证用户，即带V用户: @Model.verified<br />
+是否允许所有人对我的微博进行评论: @Model.allow_all_comment<br />
+用户大头像地址: @Model.avatar_large @MvcHtmlString.Create(string.Format("<img src='{0}' />", @Model.avatar_large))<br />
+认证原因: @Model.verified_reason<br />
+该用户是否关注当前登录用户: @Model.follow_me<br />
+用户的在线状态，0：不在线、1：在线: @Model.online_status<br />
+用户的互粉数: @Model.bi_followers_count<br />
+</p>

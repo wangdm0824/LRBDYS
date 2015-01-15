@@ -1,0 +1,74 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "ShowUserInfo";
+}
+
+<h2>用户昵称: @Model.nick</h2>
+<p>
+    出生天: @Model.birth_day
+    <br />
+    出生月: @Model.birth_month
+    <br />
+    出生年: @Model.birth_year
+    <br />
+    城市id: @Model.city_code
+    <br />
+    国家id: @Model.country_code
+    <br />
+    邮箱: @Model.email
+    <br />
+    听众数: @Model.fansnum
+    <br />
+    收藏数: @Model.favnum
+    <br />
+    头像url: @Model.head @MvcHtmlString.Create(string.Format("<img src=\"{0}/50\" />", @Model.head))
+    <br />
+    家乡所在城市id: @Model.homecity_code
+    <br />
+    家乡所在国家id: @Model.homecountry_code
+    <br />
+    个人主页: @Model.homepage
+    <br />
+    家乡所在省id: @Model.homeprovince_code
+    <br />
+    家乡所在城镇id: @Model.hometown_code
+    <br />
+    收听的人数: @Model.idolnum
+    <br />
+    行业id: @Model.industry_code
+    <br />
+    个人介绍: @Model.introduction
+    <br />
+    是否企业机构: @Model.isent
+    <br />
+    是否在当前用户的黑名单中，0-不是，1-是: @Model.ismyblack
+    <br />
+    是否是当前用户的听众，0-不是，1-是: @Model.ismyfans
+    <br />
+    是否是当前用户的偶像，0-不是，1-是: @Model.ismyidol
+    <br />
+    是否实名认证，0-老用户，1-已实名认证，2-未实名认证: @Model.isrealname
+    <br />
+    是否认证用户: @Model.isvip
+    <br />
+    所在地: @Model.location
+    <br />
+    互听好友数: @Model.mutual_fans_num
+    <br />
+    用户帐户名: @Model.name
+    <br />
+    用户唯一id，与name相对应: @Model.openid
+    <br />
+    地区id: @Model.province_code
+    <br />
+    注册时间: @Model.regtime
+    <br />
+    是否允许所有人给当前用户发私信，0-仅有偶像，1-名人+听众，2-所有人: @Model.send_private_flag
+    <br />
+    用户性别，1-男，2-女，0-未填写: @Model.sex
+    <br />
+    发表的微博数: @Model.tweetnum
+    <br />
+    认证信息: @Model.verifyinfo
+    <br />
+</p>

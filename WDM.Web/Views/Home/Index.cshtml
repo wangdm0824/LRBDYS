@@ -1,0 +1,47 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "首页";
+}
+
+<meta property="qc:admins" content="017324167764224136375" />
+
+<h2>OAuth2.0 开放授权</h2>
+<div>
+    @*  <hr />
+    <div>
+        <p>
+            <img src="../../Content/images/xlwb.jpg" />新浪微博
+        </p>
+        <a href="@Model.SinaLink">登陆</a>
+        <text>|</text>
+        <a href="http://open.t.sina.com.cn/wiki/API%E6%96%87%E6%A1%A3_V2">官方API</a>
+        <text>|</text>
+        <a href="http://open.weibo.com/tools/console">官方调试工具</a>
+    </div>*@
+
+    <hr />
+    <div>
+        <p>
+            <img src="../../Content/images/txwb.jpg" /><span style="font-size: 55px;">腾讯微博</span>
+        </p>
+        <a href="@Model.TencentLink">登陆</a>
+        <text>|</text>
+        <a href="http://wiki.open.t.qq.com/index.php/API%E6%96%87%E6%A1%A3">官方API</a>
+        <text>|</text>
+        <a href="http://open.t.qq.com/auth_tool/main.html#10">官方调试工具(谁用谁蛋疼)</a>
+    </div>
+
+
+    <div>
+        @if (ViewBag.AccessTokenObj != null)
+        { 
+            <p>用户昵称：@ViewBag.AccessTokenObj.name</p>
+        }
+    </div>
+    <div>
+        @if (ViewBag.AccessTokenObj != null)
+        { 
+            <p>@Html.ActionLink("退出", "Exit", "Home")</p>
+        }
+    </div>
+</div>

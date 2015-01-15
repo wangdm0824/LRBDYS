@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@model object
+
+<h2>操作</h2>
+<p>@Html.ActionLink("返回", "Index", "Home")</p>
+@if (Model != null)
+{
+    @Html.ActionLink("显示用户信息", "ShowUserInfo") <text> | </text>
+    @Html.ActionLink("发送测试微博", "SendMsg") <text> | </text>
+    @Html.ActionLink("发送带图片的微博", "SendMsgWithImg")
+}
